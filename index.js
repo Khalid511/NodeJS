@@ -9,6 +9,7 @@ const app = express();
 const dishRouter = require('./routes/dishRouter');
 
 app.use('/dishes', dishRouter);
+app.use('/dishes/:dishId', dishRouter);
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
